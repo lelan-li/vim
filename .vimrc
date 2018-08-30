@@ -146,6 +146,15 @@ syntax on
 " call togglebg#map("<F5>")
 " 文件树型展示-----------------------------
 Plugin 'scrooloose/nerdtree'
+" 将f2设置成开关的按键
+map <f2>:NERDTreeToggle<cr> 
+" 修改树的图标
+let g:NERDTreeDirArrowExpandable='+'
+let g:NERDTreeDirArrowCollapsible='+'
+let g:NERDTreeWinPos='left' " 窗口位置
+let g:NERDTreeSize=30 " 窗口尺寸
+let g:NERDTreeShowLineNumbers=1 " 窗口是否显示行号
+let g:NERDTreeHidden=0 " 不显示隐藏文件
 " 隐藏.pyc文件
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 " 超级搜索 ctrl+P---------------------------
