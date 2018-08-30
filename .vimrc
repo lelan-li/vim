@@ -70,13 +70,13 @@ nnoremap <C-H> <C-W><C-H>
 
 " 支持PEP8风格的缩进---------------------
 au BufNewFile,BufRead *.py
-\ set tabstop=4
-\ set softtabstop=4
-\ set shiftwidth=4
-\ set textwidth=79
-\ set expandtab
-\ set autoindent
-\ set fileformat=unix
+\ set tabstop=4 |
+\ set softtabstop=4 |
+\ set shiftwidth=4 |
+\ set textwidth=79 |
+\ set expandtab |
+\ set autoindent |
+\ set fileformat=unix |
 
 " F5执行python代码-------------------------
 map <F5> :call RunPython()<CR>
@@ -154,7 +154,7 @@ let g:NERDTreeDirArrowExpandable='+'
 let g:NERDTreeDirArrowCollapsible='-'
 let g:NERDTreeWinPos='left' " 窗口位置
 let g:NERDTreeSize=30 " 窗口尺寸
-let g:NERDTreeShowLineNumbers=1 " 窗口是否显示行号
+let g:NERDTreeShowLineNumbers=0 " 窗口是否显示行号
 let g:NERDTreeHidden=0 " 不显示隐藏文件
 " 隐藏.pyc文件
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
@@ -162,6 +162,8 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 Plugin 'kien/ctrlp.vim'
 " 状态栏插件--------------------------------
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" 自动补全---------------------------------
+Plugin 'vim-scripts/Pydiction'
 " end------------------------------------------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " required
