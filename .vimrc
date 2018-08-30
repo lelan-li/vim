@@ -46,7 +46,7 @@ filetype off                  "打开文件类型检测功能
 set mouse=a "允许鼠标点击定位
 set selection=exclusive "允许区域选择
 "set selection=mousekey
-set showmatch "高年显示匹配括号
+set showmatch "高亮显示匹配括号
 filetype plugin indent on "自动补全
 set encoding=utf-8 " 支持utf-8编码
 set completeopt=longest,menu
@@ -111,20 +111,20 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
 
 " 自动补全----------------------------------
-Plugin 'Valloric/YouCompleteMe'
-
-let g:ycm_autoclose_preview_window_after_completion=1 " 自动补全窗口不会消失
-" 转到定义
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR> 
-"python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
+" Plugin 'Valloric/YouCompleteMe'
+" 
+" let g:ycm_autoclose_preview_window_after_completion=1 " 自动补全窗口不会消失
+" " 转到定义
+" map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR> 
+" "python with virtualenv support
+" py << EOF
+" import os
+" import sys
+" if 'VIRTUAL_ENV' in os.environ:
+"   project_base_dir = os.environ['VIRTUAL_ENV']
+"   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"   execfile(activate_this, dict(__file__=activate_this))
+" EOF
 " 语法检查---------------------------------
 Plugin 'scrooloose/syntastic'
 " PEP8代码风格检查-------------------------
@@ -146,11 +146,12 @@ syntax on
 " call togglebg#map("<F5>")
 " 文件树型展示-----------------------------
 Plugin 'scrooloose/nerdtree'
+autocmd VimEnter * NERDTree
 " 将f2设置成开关的按键
-map <f2>:NERDTreeToggle<cr> 
+map <f2> :NERDTreeToggle<cr> 
 " 修改树的图标
 let g:NERDTreeDirArrowExpandable='+'
-let g:NERDTreeDirArrowCollapsible='+'
+let g:NERDTreeDirArrowCollapsible='-'
 let g:NERDTreeWinPos='left' " 窗口位置
 let g:NERDTreeSize=30 " 窗口尺寸
 let g:NERDTreeShowLineNumbers=1 " 窗口是否显示行号
