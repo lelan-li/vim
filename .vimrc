@@ -103,7 +103,8 @@ call vundle#begin()
 
 " Vundle 管理--------------------------------
 Plugin 'gmarik/Vundle.vim'
-
+" 缩进线
+Plugin 'Yggdroot/indentLine'
 " 代码折叠，防止多折------------------------
 " Plugin 'tmhedberg/SimpyFold'
 
