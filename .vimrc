@@ -95,7 +95,7 @@ nnoremap <space> za
 let g:SimpylFold_docstring_preview=1
 
 " start=====================================================================
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
@@ -104,7 +104,7 @@ call vundle#begin()
 " Vundle 管理--------------------------------
 Plugin 'gmarik/Vundle.vim'
 " 缩进线
-Plugin 'Yggdroot/indentLine'
+" Plugin 'Yggdroot/indentLine'
 " 代码折叠，防止多折------------------------
 " Plugin 'tmhedberg/SimpyFold'
 
@@ -164,7 +164,7 @@ Plugin 'kien/ctrlp.vim'
 " 状态栏插件--------------------------------
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " 自动补全---------------------------------
-Plugin 'vim-scripts/Pydiction'
+" Plugin 'vim-scripts/Pydiction'
 " end------------------------------------------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " required
